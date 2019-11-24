@@ -1,0 +1,11 @@
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.exe
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.deps.json
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.runtimeconfig.json
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.runtimeconfig.dev.json
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.dll
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\bin\Debug\netcoreapp3.0\Fibo.pdb
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\obj\Debug\netcoreapp3.0\Fibo.csprojAssemblyReference.cache
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\obj\Debug\netcoreapp3.0\Fibo.AssemblyInfoInputs.cache
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\obj\Debug\netcoreapp3.0\Fibo.AssemblyInfo.cs
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\obj\Debug\netcoreapp3.0\Fibo.dll
+G:\TestMC1\teste_mc1\fibonacci\Fibo\Fibo\obj\Debug\netcoreapp3.0\Fibo.pdb
