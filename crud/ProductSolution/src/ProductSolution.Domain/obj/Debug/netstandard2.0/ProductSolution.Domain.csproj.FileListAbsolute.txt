@@ -1,0 +1,7 @@
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\bin\Debug\netstandard2.0\ProductSolution.Domain.deps.json
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\bin\Debug\netstandard2.0\ProductSolution.Domain.dll
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\bin\Debug\netstandard2.0\ProductSolution.Domain.pdb
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\obj\Debug\netstandard2.0\ProductSolution.Domain.AssemblyInfoInputs.cache
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\obj\Debug\netstandard2.0\ProductSolution.Domain.AssemblyInfo.cs
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\obj\Debug\netstandard2.0\ProductSolution.Domain.dll
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Domain\obj\Debug\netstandard2.0\ProductSolution.Domain.pdb

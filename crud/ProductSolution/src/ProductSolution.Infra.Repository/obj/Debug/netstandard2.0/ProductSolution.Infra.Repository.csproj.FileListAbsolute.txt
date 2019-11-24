@@ -1,0 +1,11 @@
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.csprojAssemblyReference.cache
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.AssemblyInfoInputs.cache
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.AssemblyInfo.cs
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\bin\Debug\netstandard2.0\ProductSolution.Infra.Repository.deps.json
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\bin\Debug\netstandard2.0\ProductSolution.Infra.Repository.dll
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\bin\Debug\netstandard2.0\ProductSolution.Infra.Repository.pdb
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\bin\Debug\netstandard2.0\ProductSolution.Domain.dll
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\bin\Debug\netstandard2.0\ProductSolution.Domain.pdb
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.csproj.CopyComplete
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.dll
+G:\TestMC1\teste_mc1\crud\ProductSolution\src\ProductSolution.Infra.Repository\obj\Debug\netstandard2.0\ProductSolution.Infra.Repository.pdb
