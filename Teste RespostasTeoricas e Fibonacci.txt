@@ -16,6 +16,8 @@ R:
 Faço cursos on-line com bastante frequência, leio artigos, livros, acompanho perfis no LinkedIn que são relevantes.
 
 
+
+
 Crie uma função para calcular o n-ésimo elemento da Sequência de Fibonacci (fibonacci).
 
 R:
