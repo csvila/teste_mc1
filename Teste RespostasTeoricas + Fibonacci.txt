@@ -1,0 +1,201 @@
+Teste - Desenvolvimento de Software
+
+Crie um fork desse repositório, faça os testes, responda as perguntas e depois submeta um pull request.
+
+Os testes envolvendo código devem ser feitos em C#, Java ou Swift. 
+Cada codificação deve estar em uma pasta com o nome que está entre perênteses nas questões. 
+As questões teóricas devem ser respondidas em um pdf que também será adicionado ao GIT.
+
+
+
+Perguntas
+
+Como você se atualiza tecnicamente?
+
+R:
+Faço cursos on-line com bastante frequência, leio artigos, livros, acompanho perfis no LinkedIn que são relevantes.
+
+
+Crie uma função para calcular o n-ésimo elemento da Sequência de Fibonacci (fibonacci).
+
+R:
+
+using System;
+					
+public class Program
+{
+	public static int Fibonacci(int n)
+    {
+        int x = 0;
+        int y = 1;
+        
+        for (int i = 0; i < n; i++)
+        {
+            int temp = x;
+            x = y;
+            y = temp + y;
+        }
+        return x;
+    }
+	public static void Main()
+	{
+		for (int i = 0; i < 1000; i++)
+        {
+            Console.WriteLine(Fibonacci(i));
+        }
+	}
+}
+
+
+Qual solução é mais performática, iterativa ou recursiva? Por que?
+
+R:
+
+Depende da situação.
+Os dois tipos podem resolver os mesmos tipos de problemas considerando cada caso, porém cada abordagem pode ser melhor em determinados tipos de solução.
+A abordagem recursiva quebra a tarefa em algumas tarefas menores até a solução ser encontrada, 
+já a iteração repete uma tarefa apenas até que seja encontrada a solução.
+
+
+O que significa SOLID?
+
+R:
+
+É um acrônimo que representa os 5 princípios da Orientação a Objetos.
+
+SOLID -
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+D — Dependency Inversion Principle (Princípio da inversão da dependência)
+
+
+
+O que são design patterns?
+
+R:
+Padrões de projeto.
+São soluções generalistas para problemas recorrentes durante o desenvolvimento de um software.
+
+Quais são os tipos de design patterns?
+Creational - Exemplo: Singleton
+Structural - Exemplo: Facade
+Behavioral - Exemplo: Strategy Pattern
+
+
+Com quais você está familiarizado? Qual é a função deles?
+
+R:
+Repository.
+É um elo de ligação entre a camada de negócios e a camada de acesso a dados sem que a camada de negócios saiba
+qual é a base de dados que está sendo acessada.
+Usado no acesso aos dados.
+
+
+Opcional: Qual é sua opinião quanto ao uso de design patterns?
+
+R:
+Facilita o aprendizado e a manutenção do código. 
+
+
+Qual foi o último livro técnico que você leu? Quando foi isso?
+
+R:
+C# e orientação a objetos - Caelum
+Julho/2019
+
+Observação: se já tivermos lido e você for chamado para uma entrevista, perguntas poderão ser feitas a respeito do mesmo.
+
+
+Cite 3 maneiras diferentes de implementar Dependency Inversion.
+
+R:
+Criando interfaces para aumentar a abstração.
+Interfaces com responsabilidade única.
+
+
+O que são ORMs?
+
+R:
+ORM (Object Relational Mapper) é uma técnica de mapeamento objeto relacional que permite fazer uma relação dos objetos com os dados.
+
+
+Quais você conhece bem?
+
+R:
+Fluent NHibernate.
+
+
+Opcional: Cite pelo menos 2 vantagens e 2 desvantagens de seu uso.
+
+R:
+Refatoramento mais fácil, código mais resumido.
+Ainda não vi desvantagens.
+
+
+O que são microsserviços?
+
+R:
+É um tipo de arquitetura de solução.
+Divide a aplicação em funções de serviços básicas e individuais podendo ser aplicadas de forma independente.
+Independente de linguagens.
+
+
+Quais são suas vantagens e desvantagens?
+
+R:
+São produzidas mais rapidamente
+Fácil implementação
+Facilita a manutenção.
+
+Desvantagem - Talvez a visualização do sistema de forma organizada.
+
+
+
+Com a seguinte representação de produto (crud):
+{
+    "sku": 43264,
+    "name": "Batata frita Ruffles Cebola & Salsa",
+    "inventory": {
+        "quantity": 15,
+        "warehouses": [
+            {
+                "locality": "SP",
+                "quantity": 12,
+                "type": "ECOMMERCE"
+            },
+            {
+                "locality": "MOEMA",
+                "quantity": 3,
+                "type": "PHYSICAL_STORE"
+            }
+        ]
+    },
+    "isMarketable": true
+}
+
+
+Crie endpoints para as seguintes ações:
+
+Criação de produto onde o payload será o json informado acima (exceto as propriedades isMarketable e inventory.quantity)
+Edição de produto por sku
+Recuperação de produto por sku
+Deleção de produto por sku
+
+
+Requisitos:
+
+Toda vez que um produto for recuperado por sku deverá ser calculado a propriedade: inventory.quantity
+A propriedade inventory.quantity é a soma da quantity dos warehouses
+Toda vez que um produto for recuperado por sku deverá ser calculado a propriedade: isMarketable
+Um produto é marketable sempre que seu inventory.quantity for maior que 0
+Caso um produto já existente em memória tente ser criado com o mesmo sku uma exceção deverá ser lançada
+Dois produtos são considerados iguais se os seus skus forem iguais
+Ao atualizar um produto, o antigo deve ser sobrescrito com o que esta sendo enviado na requisição
+A requisição deve receber o sku e atualizar com o produto que tbm esta vindo na requisição
+
+
+Não é necessário o uso de bancos de dados.
+Testes são bem vindos.
+Você não deve levar mais do que 4 horas para o teste todo.

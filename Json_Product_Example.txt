@@ -1,0 +1,20 @@
+{
+    "sku": 43264,
+    "name": "Batata frita Ruffles Cebola & Salsa",
+    "inventory": {
+        "quantity": 15,
+        "warehouses": [
+            {
+                "locality": "SP",
+                "quantity": 12,
+                "type": "ECOMMERCE"
+            },
+            {
+                "locality": "MOEMA",
+                "quantity": 3,
+                "type": "PHYSICAL_STORE"
+            }
+        ]
+    },
+    "isMarketable": true
+}
