@@ -61,3 +61,203 @@ Requisitos:
 ### Não é necessário o uso de bancos de dados. ###
 ### Testes são bem vindos. ###
 ### Você não deve levar mais do que 4 horas para o teste todo. ###
+
+
+/*sequência de Fibpnatti*/
+using System;
+
+public static class Fibonatti
+{
+    public static void Fibo(int n)
+    {
+        int a = 0;
+        int b = 1;
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine(a);
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+    }
+}
+
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Fibonatti.Fibo(3);
+        }
+    }
+}
+
+
+/*API*/
+
+/*Classe Produto*/
+
+using System;
+using System.Collections.Generic;
+
+namespace Teste_MC1.Controllers
+{
+    public class Produto
+    {
+        public Produto()
+        {
+
+        }
+        public Produto(string sku, string nome, Inventory inventory, bool isMarketable)
+        {
+            Sku = sku;
+            Nome = nome;
+            Inventory = inventory;
+            IsMarketable = isMarketable;
+        }
+
+        public string Sku { get; set; }
+        public string Nome { get; set; }
+        public Inventory Inventory { get; set; }
+        public bool IsMarketable { get; set; }
+    }
+
+    public class Inventory
+    {
+        public int Quantity { get; set; }
+        public IEnumerable<Warehouses> Warehouses { get; set; }
+
+    }
+
+    public class Warehouses
+    {
+        public string locality { get; set; }
+        public int Quantity { get; set; }
+        public Type Type { get; set; }
+    }
+
+    public enum Type
+    {
+        ECOMMERCE,
+        PHYSICAL_STORE
+    }
+}
+
+/*Controllers*/
+
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Teste_MC1.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class ProdutoController : ControllerBase
+    {
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult CriarProduto([FromBody]Produto prod)
+        {
+            try
+            {
+                var product = GetProd(prod.Sku);
+                if (product.Count > 0)
+                    throw new Exception("Produto já existe!");
+
+                var dados = Criar(prod);
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var product = GetProd();
+            string json = JsonConvert.SerializeObject(product);
+            return Ok(json);
+        }
+
+
+
+        [HttpGet]
+        [Route("[action]/{sku:long}")]
+        public IActionResult GetBySku(long sku)
+        {
+            var product = GetProd(sku.ToString());
+            string json = JsonConvert.SerializeObject(product);
+            return Ok(json);
+        }
+
+        [HttpDelete]
+        [Route("[action]/{sku:long}")]
+        public IActionResult Delete(long sku)
+        {
+            var product = GetProd(sku.ToString());
+            string json = JsonConvert.SerializeObject(product);
+            return Ok(json);
+        }
+        private List<Produto> GetProd(string sku = "")
+        {
+            List<Produto> lProd = new List<Produto>();
+
+            var prod1 = new Produto()
+            {
+                Inventory = new Inventory()
+                {
+                    Quantity = 15,
+                    Warehouses = new List<Warehouses>
+                   {
+                       new Warehouses{locality = "SP", Quantity=12,Type=Type.ECOMMERCE}
+                   }
+                },
+                IsMarketable = true,
+                Nome = "Batata frita Ruffles Cebola & Salsa",
+                Sku = "43264"
+            };
+
+            var prod2 = new Produto()
+            {
+                Inventory = new Inventory()
+                {
+                    Quantity = 15,
+                    Warehouses = new List<Warehouses>
+                   {
+                       new Warehouses{locality = "RJ", Quantity=6,Type=Type.ECOMMERCE}
+                   }
+                },
+                IsMarketable = true,
+                Nome = "Cebola & Salsa",
+                Sku = "43265"
+            };
+
+            lProd.Add(prod1);
+            lProd.Add(prod2);
+
+            if (sku != string.Empty)
+            {
+                return (from p in lProd
+                        where p.Sku == sku
+                        select p).ToList();
+            }
+
+            return lProd;
+        }
+
+        private Produto Criar(Produto prod)
+        {
+            return new Produto(prod.Sku, prod.Nome, prod.Inventory, prod.IsMarketable);
+        }
+
+    }
+}
+
