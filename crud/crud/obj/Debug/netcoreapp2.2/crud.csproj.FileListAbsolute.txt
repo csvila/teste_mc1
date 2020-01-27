@@ -1,0 +1,13 @@
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\bin\Debug\netcoreapp2.2\crud.deps.json
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\bin\Debug\netcoreapp2.2\crud.runtimeconfig.json
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\bin\Debug\netcoreapp2.2\crud.runtimeconfig.dev.json
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\bin\Debug\netcoreapp2.2\crud.dll
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\bin\Debug\netcoreapp2.2\crud.pdb
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.csproj.CoreCompileInputs.cache
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.RazorAssemblyInfo.cache
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.RazorAssemblyInfo.cs
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.AssemblyInfoInputs.cache
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.AssemblyInfo.cs
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.RazorTargetAssemblyInfo.cache
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.dll
+D:\JbeloDev\Teste-Taking\teste_mc1\crud\crud\obj\Debug\netcoreapp2.2\crud.pdb
