@@ -14,3 +14,7 @@ Implementação simples de uma API feita em dotnet
 dotnet restore
 dotnet run
 ```
+- ou para rodar com o docker execute os comandos:
+````
+docker build -t mc1api .
+docker run -d -p 8080:80 --name myapp mc1api
