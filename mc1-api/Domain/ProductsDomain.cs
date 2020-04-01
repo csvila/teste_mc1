@@ -1,3 +1,4 @@
+using mc1_api.Domain.Interfaces;
 using mc1_api.Infrastructure;
 using mc1_api.Models;
 using System;
@@ -6,16 +7,20 @@ using System.Linq;
 
 namespace mc1_api.Domain
 {
-    public class ProductsDomain
+    public class ProductsDomain : IProductsDomain
     {
-        public static IList<Product> GetAll()
+        public ProductsDomain()
+        {
+        }
+
+        public IList<Product> GetAll()
         {
             var products = ProductsRepo.Instance.List();
 
             return products;
         }
 
-        public static Product GetBySKU(int sku)
+        public Product GetBySKU(int sku)
         {
             var product = ProductsRepo.Instance.Get(sku);
             if (product?.Inventory.Warehouses.Count > 0)
@@ -27,7 +32,7 @@ namespace mc1_api.Domain
             return product;
         }
 
-        internal static Product AddProduct(Product product)
+        public Product AddProduct(Product product)
         {
             var p = ProductsRepo.Instance.Get(product.Sku);
             if (p != null) return null;
@@ -36,7 +41,7 @@ namespace mc1_api.Domain
             return product;
         }
 
-        internal static bool UpdateProduct(int sku, Product product)
+        public bool UpdateProduct(int sku, Product product)
         {
             var oldProduct = ProductsRepo.Instance.Get(sku);
             if (oldProduct == null) return false;
@@ -46,7 +51,7 @@ namespace mc1_api.Domain
             return true;
         }
 
-        internal static bool DeleteProduct(int sku)
+        public bool DeleteProduct(int sku)
         {
             var product = ProductsRepo.Instance.Get(sku);
             if (product == null) return false;
