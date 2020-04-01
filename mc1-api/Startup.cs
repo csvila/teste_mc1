@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using mc1_api.Domain;
+using mc1_api.Domain.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,20 +35,15 @@ namespace mc1_api
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
 
-            services.AddMvc()
-                    // .AddJsonOptions(options =>
-                    // {
-                    //     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-                    //     options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
-                    //     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-                    // })
-                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MC1 API", Version = "v1" });
                 c.DescribeAllParametersInCamelCase();
             });
+
+            services.AddScoped<IProductsDomain, ProductsDomain>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
