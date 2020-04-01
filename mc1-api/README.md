@@ -7,7 +7,7 @@ Implementação simples de uma API feita em dotnet
   - .net core 2.1
   - macOS
 - Foi adicionado o swagger para facilitar os testes
-- Usado injecao de dependencia entre controle e domain e singleton na infraestrutura
+- Usado injecao de dependencia entre Controler e Domain e singleton na Infrastrucure
 - Para executar basta executar os comandos:
 
 ```
